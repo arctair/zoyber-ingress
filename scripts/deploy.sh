@@ -18,6 +18,13 @@ spec:
       - backend:
           serviceName: hashbang
           servicePort: 5000
+  - host: api.snare.cc
+    http:
+      paths:
+      - path: /pages
+        backend:
+          serviceName: snarecc-pages
+          servicePort: 8080
 ---
 apiVersion: cert-manager.io/v1alpha2
 kind: ClusterIssuer
