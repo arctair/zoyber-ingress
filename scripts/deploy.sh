@@ -6,6 +6,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-production
+    nginx.ingress.kubernetes.io/rewrite-target: /\$2
 spec:
   tls:
   - hosts:
@@ -15,13 +16,14 @@ spec:
   - host: hashbang.arctair.com
     http:
       paths:
-      - backend:
+      - path: /()(.*)
+        backend:
           serviceName: hashbang
           servicePort: 5000
   - host: api.snare.cc
     http:
       paths:
-      - path: /pages
+      - path: /pages(/|$)(.*)
         backend:
           serviceName: snarecc-pages
           servicePort: 8080
