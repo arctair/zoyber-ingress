@@ -19,7 +19,7 @@ spec:
       - path: /()(.*)
         backend:
           serviceName: hashbang
-          servicePort: 5000
+          servicePort: 8080
 ---
 apiVersion: cert-manager.io/v1alpha2
 kind: ClusterIssuer
