@@ -22,6 +22,13 @@ spec:
         backend:
           serviceName: hashbang
           servicePort: 8080
+  - host: painkiller.arctair.com
+    http:
+      paths:
+      - path: /(recommendations)(.*)
+        backend:
+          serviceName: recommendations
+          servicePort: 8080
 ---
 apiVersion: cert-manager.io/v1alpha2
 kind: ClusterIssuer
