@@ -1,1 +1,2 @@
+#!/bin/sh
 kubectl apply -f scripts/configuration.yml
