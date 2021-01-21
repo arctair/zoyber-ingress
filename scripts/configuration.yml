@@ -28,9 +28,13 @@ spec:
         backend:
           serviceName: layouts
           servicePort: 8080
-      - path: /(ktor-starter)(.*)
+      - path: /ktor-starter(/|$)(.*)
         backend:
           serviceName: ktor-starter
+          servicePort: 8080
+      - path: /ktor-starter-dark(/|$)(.*)
+        backend:
+          serviceName: ktor-starter-dark
           servicePort: 8080
 ---
 apiVersion: cert-manager.io/v1alpha2
