@@ -44,6 +44,14 @@ spec:
         backend:
           serviceName: stepper-dark
           servicePort: 8080
+      - path: /stepper-target(/|$)(.*)
+        backend:
+          serviceName: stepper-target
+          servicePort: 8080
+      - path: /stepper-target-dark(/|$)(.*)
+        backend:
+          serviceName: stepper-target-dark
+          servicePort: 8080
 ---
 apiVersion: cert-manager.io/v1alpha2
 kind: ClusterIssuer
