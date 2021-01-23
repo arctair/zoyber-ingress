@@ -36,6 +36,14 @@ spec:
         backend:
           serviceName: ktor-starter-dark
           servicePort: 8080
+      - path: /stepper(/|$)(.*)
+        backend:
+          serviceName: stepper
+          servicePort: 8080
+      - path: /stepper-dark(/|$)(.*)
+        backend:
+          serviceName: stepper-dark
+          servicePort: 8080
 ---
 apiVersion: cert-manager.io/v1alpha2
 kind: ClusterIssuer
