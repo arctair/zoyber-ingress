@@ -28,9 +28,13 @@ spec:
   - host: painkiller.arctair.com
     http:
       paths:
-      - path: /(layouts)(.*)
+      - path: /layouts(/|$)(.*)
         backend:
           serviceName: layouts
+          servicePort: 8080
+      - path: /layouts-dark(/|$)(.*)
+        backend:
+          serviceName: layouts-dark
           servicePort: 8080
       - path: /ktor-starter(/|$)(.*)
         backend:
