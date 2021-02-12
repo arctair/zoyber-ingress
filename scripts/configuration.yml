@@ -17,13 +17,13 @@ spec:
   - host: hashbang.arctair.com
     http:
       paths:
-      - path: /api(/|$)(.*)
+      - path: /hashbang(/|$)(.*)
         backend:
-          serviceName: api
+          serviceName: hashbang
           servicePort: 8080
-      - path: /api-dark(/|$)(.*)
+      - path: /hashbang-dark(/|$)(.*)
         backend:
-          serviceName: api-dark
+          serviceName: hashbang-dark
           servicePort: 8080
       - path: /stepper(/|$)(.*)
         backend:
