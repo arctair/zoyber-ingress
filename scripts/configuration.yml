@@ -25,6 +25,14 @@ spec:
         backend:
           serviceName: api-dark
           servicePort: 8080
+      - path: /stepper(/|$)(.*)
+        backend:
+          serviceName: stepper
+          servicePort: 8080
+      - path: /stepper-dark(/|$)(.*)
+        backend:
+          serviceName: stepper-dark
+          servicePort: 8080
   - host: painkiller.arctair.com
     http:
       paths:
